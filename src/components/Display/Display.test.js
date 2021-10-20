@@ -6,10 +6,16 @@ describe("When given Display component", () => {
     test("it should display the number string", () => {
       const numberString = "12345";
 
-      render(<span className="number">{numberString}</span>);
-      const text = screen.getByText(numberString);
+      render(
+        <Display
+          className="number"
+          data-testid="displayid"
+          numberString={numberString}
+        />
+      );
+      const text = screen.getByTestId("displayid");
 
-      expect(text).toBeInTheDocument();
+      expect(text).toBeInTheDocument(numberString);
     });
   });
 });

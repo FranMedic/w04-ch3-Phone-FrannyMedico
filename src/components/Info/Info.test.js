@@ -7,15 +7,11 @@ describe("When given Info component", () => {
       const calling = true;
       const expected = "Calling...";
 
-      render(
-        <span data-testid="infoId" class="message">
-          {calling ? "Calling..." : ""}
-        </span>
-      );
-      const text = screen.getByText(expected);
+      render(<Info data-testid="infoId" calling={calling} />);
+      const text = screen.getByTestId("infoId");
 
       // Assert
-      expect(text).toBeInTheDocument();
+      expect(text).toBeInTheDocument(expected);
     });
   });
 });
