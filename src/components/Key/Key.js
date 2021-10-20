@@ -12,3 +12,5 @@ Key.propTypes = {
   text: PropTypes.string.isRequired,
   actionOnClick: PropTypes.func.isRequired,
 };
+
+export default Key;
