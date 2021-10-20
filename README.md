@@ -20,7 +20,6 @@ Info
 Display
 
 - Renderizar número RECIBIDO
-- RECIBE FUNCION PARA BORRAR NUMERO
 
 Actions
 
