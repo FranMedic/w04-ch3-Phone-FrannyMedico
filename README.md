@@ -1,46 +1,58 @@
-App
-
-- TIENE un array vacío
-- RENDERIZA todos los componentes
-- Pasar el array al display
-- Crear condición máximo 9 cifras
-- Crear función tiempo llamada
-- Crear función borrar número
-- Crear función llamar
-  · Bloquear el teclado
-  · Aparecer Info
-  · Activar botón colgar
-  · Desactivar llamar
-  · Activar contador tiempo llamada
-
-Info
+## INFO
 
 - Mostrar texto según condición RECIBIDA
 
-Display
+## DISPLAY
+
+-renderiza un input
 
 - Renderizar número RECIBIDO
 
-Actions
+## ACTIONS
 
 - RECIBE un boton y lo renderiza
-- TIENE un texto que le pasa a action
-- TIENE una clase y se la pase a action
+- segun los parametros RECIBIDOS Crea los componentes action, y les pasa su texto, su funcion y su clase
 
-Action
+## ACTION
 
-- RECIBIR una clase
+- RECIBIR una clase (active/inactive)
 - RECIBIR una función
 - RENDERIZA texto recibido
-- RECIBIR un estado
 
-KeyBoard
+## KEYBOARD
 
 - RENDERIZA TECLAS
-- Pasa texto a cada tecla
-- Pasar una función a cada tecla
+- Pasa texto a cada Key
+- Pasar una función a cada Key
+- RECIBE un estado que desabilita las teclas
 
-Key
+## KEY
 
 - Mostrar un texto RECIBIDO
 - RECIBIR una función que se ejecuta al hacer click
+
+## APP
+
+    -RENDERIZA todos los componentes
+    -Crea array numeros vacio
+    -Crea un estado al array numeros y pasarselo al Display,
+    -Añadir al display un maximo de numeros que acepta
+
+    -Crear funcion de llamada activada al hacerle click al boton llamada
+      +Al llamarse debe:
+        -desailitar el teclado pasandole una clase/elemento a keyboard (revisar)
+        -enviar a info una condicion para que se renderice
+        -enviar clase active al actions
+        -activar el contador de tiempo
+        -restaurar el estado inicial de display
+
+    -Crear funcion de colgar, llamada a traves del click en el boton o al acabarse el temporizador
+      -debe restaurar todos los elementos al inicio
+        + cambiar clase a inactive de boton colgar y a active el de llamar
+        + borrar la info/o que desaparezca (revisar)
+        + activar teclado
+
+    -Crear funcion borrar
+      -borrar el ultimo numero añadido al array de numeros
+
+    -
