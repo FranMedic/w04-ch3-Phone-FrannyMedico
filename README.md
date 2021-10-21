@@ -10,7 +10,9 @@
 
 ## ACTIONS
 
-- RECIBE un boton y lo renderiza
+-RECIBE un string de numero y renderiza el input
+
+- RECIBE un texto y lo renderiza
 - segun los parametros RECIBIDOS Crea los componentes action, y les pasa su texto, su funcion y su clase
 
 ## ACTION
