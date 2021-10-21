@@ -1,4 +1,5 @@
 import Key from "../Key/Key";
+import PropTypes from "prop-types";
 const Keyboard = ({ numbersList, numbersKeys, deleteKeys }) => {
   return (
     <ol className="keyboard">
@@ -15,3 +16,8 @@ const Keyboard = ({ numbersList, numbersKeys, deleteKeys }) => {
   );
 };
 export default Keyboard;
+Keyboard.propTypes = {
+  numbersList: PropTypes.array.isRequired,
+  numbersKeys: PropTypes.func.isRequired,
+  deleteKeys: PropTypes.func.isRequired,
+};
