@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "./App.css";
+import Actions from "./components/Actions/Actions";
 import Display from "./components/Display/Display";
 import Info from "./components/Info/Info";
-import Key from "./components/Key/Key";
+
 import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
@@ -18,11 +20,11 @@ function App() {
     { id: 10, type: true, text: "0" },
     { id: "delete", type: false, text: "Delete" },
   ];
-
+  const [calling, setCalling] = useState(false);
   return (
     <>
       <div className="container">
-        <Info calling={true} />
+        <Info calling={calling} />
         <main className="phone">
           <div className="keyboard-container">
             <Keyboard
@@ -33,12 +35,11 @@ function App() {
           </div>
           <div className="actions">
             <Display numberString={"12345"} />
-            <a href="#" className="call">
-              Call
-            </a>
-            <a href="#" className="hang active">
-              Hang
-            </a>
+            <Actions
+              calling={calling}
+              callFunction={() => {}}
+              hangFunction={() => {}}
+            />
           </div>
         </main>
       </div>
