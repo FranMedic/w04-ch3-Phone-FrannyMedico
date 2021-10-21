@@ -4,7 +4,7 @@
 
 ## DISPLAY
 
--renderiza un input
+-renderiza el espacio donde se muestran los numeros
 
 - Renderizar número RECIBIDO
 
