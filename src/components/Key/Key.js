@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-const Key = ({ text, actionOnClick }) => {
+const Key = ({ text, classinfo, actionOnClick }) => {
   return (
     <li>
-      <button className="key" onClick={actionOnClick}>
+      <button className={classinfo ? "key" : "big key"} onClick={actionOnClick}>
         {text}
       </button>
     </li>
@@ -10,6 +10,7 @@ const Key = ({ text, actionOnClick }) => {
 };
 Key.propTypes = {
   text: PropTypes.string.isRequired,
+  classinfo: PropTypes.string.isRequired,
   actionOnClick: PropTypes.func.isRequired,
 };
 
