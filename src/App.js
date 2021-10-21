@@ -2,6 +2,7 @@ import "./App.css";
 import Display from "./components/Display/Display";
 import Info from "./components/Info/Info";
 import Key from "./components/Key/Key";
+import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
   const numbers = [
@@ -17,26 +18,18 @@ function App() {
     { id: 10, type: true, text: "0" },
     { id: "delete", type: false, text: "Delete" },
   ];
-  const patata = () => {
-    console.log("ayuda");
-  };
+
   return (
     <>
       <div className="container">
         <Info calling={true} />
         <main className="phone">
           <div className="keyboard-container">
-            <ol className="keyboard">
-              {numbers.map((number, i) => (
-                <Key
-                  key={number.id}
-                  text={number.text}
-                  classinfo={number.text}
-                  actionOnClick={patata}
-                />
-              ))}
-              ;
-            </ol>
+            <Keyboard
+              numbersList={numbers}
+              numbersKeys={() => {}}
+              deleteKeys={() => {}}
+            />
           </div>
           <div className="actions">
             <Display numberString={"12345"} />
